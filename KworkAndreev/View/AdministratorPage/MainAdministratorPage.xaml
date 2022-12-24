@@ -1,0 +1,110 @@
+﻿<Page x:Class="KworkAndreev.View.AdministratorPage.MainAdministratorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:KworkAndreev.View.AdministratorPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="500"
+      d:DesignWidth="1000"
+      Title="MainAdministratorPage">
+
+    <Grid>
+        <Border
+            Width="1000"
+            Height="500"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="White">
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="700*"/>
+            </Grid.RowDefinitions>
+            <Border>
+                <Menu
+            Grid.Row="0"
+            Background="#0745e3"
+            IsMainMenu="True">
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <DockPanel HorizontalAlignment="Stretch" />
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem
+                    x:Name="MenuItemOrders"
+                    Click="MenuItemOrders_Click"
+                    Cursor="Hand"
+                    Header="Managment"
+                    Foreground="White"
+                    Width="235"
+                    Margin="0,0, 0, 0">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                            Foreground="White"
+                            Kind="OrderAlphabeticalAscending"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem
+                    x:Name="MenuItemUsers"
+                    Click="MenuItemUser_Click"
+                    Cursor="Hand"
+                    Header="Users"
+                    Foreground="White"
+                    Width="235"
+                    Margin="0, 0, 0, 0">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                            Foreground="White"
+                            Kind="User"/>
+                        </MenuItem.Icon>
+
+                    </MenuItem>
+                    <MenuItem
+                        x:Name="MenuItemRequests"
+                        Click="MenuItemRequests_Click"
+                        Cursor="Hand"
+                        Header="Requests"
+                        Foreground="White"
+                        Margin="0,0,0,0" Width="235">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                                Foreground="White"
+                                Kind="OrderBoolAscending" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem
+                    x:Name="AddService"
+                    Click="AddService_Click"
+                    Cursor="Hand"
+                    Header="New Service"
+                    Foreground="White"
+                    Margin="0, 0,0 ,0"
+                    Width="235">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                            Foreground="White"
+                            Kind="NewBox" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem
+                        x:Name="MenuExit"
+                        Click="MenuExit_Click"
+                        Cursor="Hand"
+                        Header="Exit"
+                        Foreground="White"
+                        Margin="0, 0,0,0" Width="50">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                                Foreground="White"
+                                Kind="ExitRun" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </Menu>
+            </Border>
+            <Grid x:Name="GridContentLoad" Grid.Row="1" Cursor="" />
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,61 @@
+﻿<Page x:Class="KworkAndreev.View.EmployerPage.MainEmployerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:KworkAndreev.View.EmployerPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="600"
+      d:DesignWidth="1000"
+      Title="MainEmployerPage">
+
+    <Grid>
+        <Border
+            Width="900"
+            Height="550"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="White"
+            Effect="{StaticResource MaterialDesignElevationShadow16}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Menu
+                    Grid.Row="0"
+                    Background="#0745e3"
+                    IsMainMenu="True">
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <DockPanel HorizontalAlignment="Stretch" />
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <TextBlock Text="ШАМ"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               FontSize="20" Height="29"
+                               Foreground="White"/>
+                    <MenuItem
+                        x:Name="TbLogout"
+                        HorizontalAlignment="Center"
+                        Click="TbLogout_Click"
+                        Cursor="Hand"
+                        Foreground="White"
+                        Margin="0 0 -690 0"
+                        Effect="{StaticResource MaterialDesignElevationShadow16}"
+                        Header="Logout">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="15"
+                                Foreground="White"
+                                Kind="Logout" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </Menu>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bbe4c1f64c744328d0e9505cc31e6ae" Name="Diagram1">
+        <EntityTypeShape EntityType="kworkBDAndrModel.Order" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kworkBDAndrModel.Role" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="kworkBDAndrModel.Service" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kworkBDAndrModel.User" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="kworkBDAndrModel.FK_Orders_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="kworkBDAndrModel.FK_Orders_User" ManuallyRouted="false" />
+        <AssociationConnector Association="kworkBDAndrModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="kworkBDAndrModel.FK_Services_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
