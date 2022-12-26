@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище kworkBDAndrModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище kworkDBAndreevModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="OrdersID" />
@@ -79,7 +79,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище kworkBDAndrModelContainer">
+        <EntityContainer Name="Хранилище kworkDBAndreevModelContainer">
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
@@ -101,7 +101,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="kworkBDAndrModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="kworkDBAndreevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="OrdersID" />
@@ -182,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="kworkBDAndrEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="kworkDBAndreevEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Services" EntityType="Self.Service" />
@@ -205,9 +205,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище kworkBDAndrModelContainer" CdmEntityContainer="kworkBDAndrEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище kworkDBAndreevModelContainer" CdmEntityContainer="kworkDBAndreevEntities">
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="kworkBDAndrModel.Order">
+            <EntityTypeMapping TypeName="kworkDBAndreevModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrdersID" ColumnName="OrdersID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -218,7 +218,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="kworkBDAndrModel.Role">
+            <EntityTypeMapping TypeName="kworkDBAndreevModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
@@ -226,7 +226,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Services">
-            <EntityTypeMapping TypeName="kworkBDAndrModel.Service">
+            <EntityTypeMapping TypeName="kworkDBAndreevModel.Service">
               <MappingFragment StoreEntitySet="Services">
                 <ScalarProperty Name="SerivesID" ColumnName="SerivesID" />
                 <ScalarProperty Name="ServicesName" ColumnName="ServicesName" />
@@ -237,7 +237,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="kworkBDAndrModel.User">
+            <EntityTypeMapping TypeName="kworkDBAndreevModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Login" ColumnName="Login" />

@@ -13,10 +13,10 @@ namespace KworkAndreev.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class kworkBDAndrEntities : DbContext
+    public partial class kworkDBAndreevEntities : DbContext
     {
-        public kworkBDAndrEntities()
-            : base("name=kworkBDAndrEntities")
+        public kworkDBAndreevEntities()
+            : base("name=kworkDBAndreevEntities")
         {
         }
     

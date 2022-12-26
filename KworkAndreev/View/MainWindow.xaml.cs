@@ -28,7 +28,7 @@ namespace KworkAndreev
             InitializeComponent();
             FrameNavigate.FrameObject = MainWindowFrame;
             MainWindowFrame.Navigate(new MainWindowLoginPage());
-            FrameNavigate.DB = new kworkBDAndrEntities();
+            FrameNavigate.DB = new kworkDBAndreevEntities();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
