@@ -20,15 +20,13 @@ namespace KworkAndreev.Model
             this.Orders = new HashSet<Order>();
         }
     
-        public int ServicesID { get; set; }
+        public int SerivesID { get; set; }
         public string ServicesName { get; set; }
         public string ServicesPrice { get; set; }
-        public int UserID { get; set; }
         public byte[] ServicesImage { get; set; }
-        public string ServicesDescription { get; set; }
+        public string ServiceDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
-        public virtual User User { get; set; }
     }
 }

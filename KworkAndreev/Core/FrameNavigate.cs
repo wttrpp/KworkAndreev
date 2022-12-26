@@ -13,5 +13,7 @@ namespace KworkAndreev.Core
         public static Frame FrameObject { get; set; }
 
         public static kworkBDAndrEntities DB { get; set; }
+
+        public static int UserID { get; set; }
     }
 }

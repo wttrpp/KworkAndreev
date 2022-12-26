@@ -43,17 +43,21 @@ namespace KworkAndreev.View.AdministratorPage.UserControls
                 {
                     MessageBox.Show("Такая услуга уже существует", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                FrameNavigate.DB.Services.Add(new Model.Service
+                else
                 {
-                    ServicesName = TbServicesName.Text,
-                    ServicesPrice = TbPrice.Text,
-                    ServicesImage = imageDB,
-                    ServicesDescription = TbServicesDescription.Text
-                });
+                    FrameNavigate.DB.Services.Add(new Model.Service
+                    {
+                        ServicesName = TbServicesName.Text,
+                        ServicesPrice = TbPrice.Text,
+                        ServicesImage = imageDB,
+                        ServiceDescription = TbServicesDescription.Text
+                    });
+                    await FrameNavigate.DB.SaveChangesAsync();
+                    MessageBox.Show("Услуга успешно добавлена", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
+                    FrameNavigate.FrameObject.Navigate(new MainAdministratorPage());
+                }
 
-                await FrameNavigate.DB.SaveChangesAsync();
-                MessageBox.Show("Услуга успешно добавлена", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
-                FrameNavigate.FrameObject.Navigate(new MainAdministratorPage());
+               
 
             }
         }

@@ -37,6 +37,7 @@ namespace KworkAndreev.View.LoginPage
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+           
             try
             {
                 User userModel = FrameNavigate.DB.Users.FirstOrDefault(u => u.Login == Tblogin.Text && u.Password == TbRegister.Text);
@@ -49,6 +50,7 @@ namespace KworkAndreev.View.LoginPage
                 }
                 else
                 {
+                    FrameNavigate.UserID = userModel.UserID;
                     switch (userModel.RoleID)
                     {
                         case 1:

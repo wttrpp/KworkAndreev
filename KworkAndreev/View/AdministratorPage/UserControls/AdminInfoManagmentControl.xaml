@@ -11,8 +11,9 @@
 
     <Grid>
         <Border
-          Height="350"
-          Width="700"
+          Width="900"
+          Height="400"
+          Margin="-25 -60 5 5"
           HorizontalAlignment="Center"
           VerticalAlignment="Center"
           Background="White"

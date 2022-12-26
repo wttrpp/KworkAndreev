@@ -19,8 +19,9 @@
             Orientation="Horizontal">
             <DataGrid
                 x:Name="DataOrderInfo"
-                Width="950"
-                Height="325"
+                Width="900"
+                Height="400"
+                Margin="-25 -60 5 5"
                 AutoGenerateColumns="False"
                 Background="White"
                 CanUserAddRows="False"
@@ -45,7 +46,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn
                         Width="Auto"
-                        Binding="{Binding ServicesID}"
+                        Binding="{Binding SerivesID}"
                         FontSize="15"
                         Foreground="Black">
                         <DataGridTextColumn.Header>

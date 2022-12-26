@@ -16,8 +16,9 @@
             VerticalAlignment="Center">
             <DataGrid
                 x:Name="DataManagmentInfo"
-                Width="950"
-                Height="450"
+                Width="900"
+                Height="400"
+                Margin="-25 -60 5 5"
                 AlternatingRowBackground="White"
                 AutoGenerateColumns="False"
                 Background="White"
@@ -42,7 +43,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn
                         Width="Auto"
-                        Binding="{Binding Orders.RequestsID}"
+                        Binding="{Binding OrdersID}"
                         FontSize="15"
                         Foreground="Black">
                         <DataGridTextColumn.Header>
@@ -51,7 +52,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="Auto"
-                        Binding="{Binding Order.User.Login}"
+                        Binding="{Binding User.Login}"
                         FontSize="15"
                         Foreground="Black">
                         <DataGridTextColumn.Header>
@@ -60,7 +61,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="Auto"
-                        Binding="{Binding Services.CervicesName}"
+                        Binding="{Binding Service.ServicesName}"
                         FontSize="15"
                         Foreground="Black">
                         <DataGridTextColumn.Header>
@@ -69,7 +70,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="Auto"
-                        Binding="{Binding Services.ServicesPrice}"
+                        Binding="{Binding Service.ServicesPrice}"
                         FontSize="15"
                         Foreground="Black">
                         <DataGridTextColumn.Header>
@@ -86,7 +87,8 @@
                                     Click="BtnDelete_Click"
                                     Foreground="Black"
                                     Style="{StaticResource MaterialDesignFlatLightButton}"
-                                    ToolTip="Удалить запрос">
+                                    ToolTip="Удалить запрос"
+                                    Tag="{Binding SerivesID}">
                                     <StackPanel Orientation="Horizontal">
                                         <materialDesign:PackIcon Kind="Delete"/>
                                     </StackPanel>
@@ -104,7 +106,8 @@
                                     Click="BtnAccept_Click"
                                     Foreground="Black"
                                     Style="{StaticResource MaterialDesignFlatLightButton}"
-                                    ToolTip="Принять">
+                                    ToolTip="Принять"
+                                    Tag="{Binding SerivesID}">
                                     <StackPanel Orientation="Horizontal">
                                         <materialDesign:PackIcon Kind="Check"/>
                                     </StackPanel>

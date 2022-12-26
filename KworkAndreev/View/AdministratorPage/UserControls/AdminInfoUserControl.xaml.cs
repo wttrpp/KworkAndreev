@@ -30,9 +30,11 @@ namespace KworkAndreev.View.AdministratorPage.UserControls
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            int UserID = (DataUsersInfo.ItemsSource as User).UserID;
-            ///User user = (from u in FrameNavigate.DB.Users where u.UserID = UserID select u);
-            
+            var UserID = (DataUsersInfo.SelectedItem as User).UserID;
+            User user = (from u in FrameNavigate.DB.Users where u.UserID == UserID select u).FirstOrDefault();
+            FrameNavigate.DB.Users.Remove(user);
+            FrameNavigate.DB.SaveChanges();
+            DataUsersInfo.ItemsSource = FrameNavigate.DB.Users.OrderBy(u => u.Login).ToList();
 
         }
     }

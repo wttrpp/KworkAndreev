@@ -15,8 +15,10 @@
             VerticalAlignment="Center">
             <DataGrid
                 x:Name="DataUsersInfo"
-                Width="950"
-                Height="450"
+                
+                Width="900"
+                Height="400"
+                Margin="-25 -60 5 5"
                 AlternatingRowBackground="#F0fff0"
                 AutoGenerateColumns="False"
                 Background="White"
@@ -72,11 +74,10 @@
                             <TextBlock Text="Электроная почта" Foreground="Black"/>
                         </DataGridTextColumn.Header>
                     </DataGridTextColumn>
-                </DataGrid.Columns>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button
                                 x:Name="BtnDelete"
                                 Background="Transparent"
                                 BorderBrush="White"
@@ -84,16 +85,15 @@
                                 Foreground="Black"
                                 Style="{StaticResource MaterialDesignFlatLightButton}"
                                 ToolTip="Удалить пользователя">
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon Kind="Delete" />
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Delete" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
             </DataGrid>
-            
         </StackPanel>
-        
     </Grid>
 </UserControl>

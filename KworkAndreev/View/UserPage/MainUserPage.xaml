@@ -59,32 +59,28 @@
                     ScrollViewer.VerticalScrollBarVisibility="Hidden">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border BorderBrush="Black" BorderThickness="1">
-                                <Grid Width="700" Margin="20">
+                            <Border  BorderThickness="1">
+                                <Grid Width="700" Height="200" Margin="20">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="50"/>
+                                        <RowDefinition />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Border BorderBrush="#0745e3" BorderThickness="3" Grid.RowSpan="2">
+                                    <Border Padding="0" BorderBrush="#0745e3" BorderThickness="3" Grid.RowSpan="2" Height="100" Width="150">
                                         <Image
-                                            Height="100"
                                             Grid.RowSpan="2"
                                             Grid.Column="0"
-                                            Width="100"
-                                            Margin="5"
                                             VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
-                                            Stretch="Uniform">
+                                            Stretch="Fill">
                                             <Image.Source>
                                                 <Binding Path="ServicesImage">
-                                                    <Binding.TargetNullValue>
-                                                        <ImageSource>/Images/picture/picture-none.png</ImageSource>
-                                                    </Binding.TargetNullValue>
+                                                    
                                                 </Binding>
                                             </Image.Source>
                                         </Image>
@@ -98,19 +94,22 @@
                                         TextAlignment="Center"
                                         TextWrapping="Wrap"
                                         FontSize="15"
+                                        
                                         Foreground="#0745e3"
                                         Text="{Binding ServicesName, StringFormat={}Название: {0}}" />
                                     <TextBlock
-                                        Grid.Row="0"
-                                        Grid.Column="1"
-                                        Width="200"
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        Width="300"
                                         HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
+                                        VerticalAlignment="Bottom"
                                         TextAlignment="Center"
                                         TextWrapping="Wrap"
-                                        FontSize="15"
+                                        FontSize="13"
+                                        Margin="0 -20 0 0"
                                         Foreground="#0745e3"
-                                        Text="{Binding ServicesDescription, StringFormat={}Описание: {0}}" />
+                                        Text="{Binding ServiceDescription, StringFormat={}Описание: {0}}" />
                                     <TextBlock
                                         Grid.Row="1"
                                         Grid.Column="1"
@@ -145,9 +144,6 @@
                                                 Text="Заказать услугу"/>
                                         </StackPanel>
                                     </Button>
-                                        
-
-
                                 </Grid>
                             </Border>
                         </DataTemplate>
